@@ -1,0 +1,38 @@
+@use '../../SASS//Main' as * ;
+
+nav{
+    @include size(100% , 80px);
+    @include flex(space-between,center);
+    @include screen(xsm){
+        flex-wrap: wrap;
+        @include size(100% , 120px);
+        @include flex(center,center);
+    }
+}
+nav .logo{
+    vertical-align: middle;
+    font-size: 20px;
+    @include screen(xsm){
+        width: 100%;
+        text-align: center
+    }
+}
+nav .links{
+    position: relative;
+    @include size(60%,50px);
+    @include flex(center,center);
+    gap:20px;
+    font-size: 20px;
+    border-radius: 25px;
+    color: var(--text-nav);
+    background-color: var( --bg-body);
+    box-shadow: 0px 0px 20px var(--sh-bg);
+    @include screen(xsm){
+        width: 80%;
+        box-shadow: 0px 0px 2px var(--sh-bg);
+        font-size: 18px;
+        gap:5px;
+    }
+}
+
+

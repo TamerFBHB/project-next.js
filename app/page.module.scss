@@ -1,0 +1,49 @@
+@use './SASS/Main' as * ;
+
+
+.home{
+    @include size(100% , 100vh) ;
+    @include flex(center,center);
+    overflow: hidden;
+    @include screen(lg){
+        @include flex-col(center,center);
+    }
+}
+.home .ad{
+    @include size(50% , 100%);
+    @include flex-col(center,start);
+    gap: 10px;
+    @include screen(lg){
+        @include size(100% , 40%);
+        @include flex-col(center,center);
+    }
+}
+
+.home .ad h1{
+    width: 80%;
+    line-height: 65px;
+    text-align: start;
+    padding-left: 5px;
+    text-transform: uppercase;
+    @include text-gradient(right, 55px, var(--text-gradient1) , var(--text-gradient2) );
+    @include screen(lg){
+        text-align: center;
+        line-height: 75px;
+    }
+}
+.home .ad p{
+    width: 80%;
+    font-size: 20px;
+    line-height: 28px;
+    padding-left: 5px;
+    @include screen(lg){
+        text-align: center;
+    }
+}
+.home .photo{
+    @include size(50% , 100%);
+    @include flex(center,center);
+    @include screen(lg){
+        @include size(100% ,40%);
+    }
+}

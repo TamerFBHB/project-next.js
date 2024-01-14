@@ -1,0 +1,53 @@
+@use '../SASS//Main' as* ;
+
+.products{
+    padding: 30px;
+    @include flex-col(center,center);
+}
+.products ul{
+    @include size(100% , 40px);
+    @include flex(center,center);
+    gap: 10px;
+    color: var(--text-body);
+}
+.products ul li {
+    @include size(150px , 100%);
+    @include flex(center,center);
+    border: 1px solid var(--sh-bg);
+    border-radius: 8px;
+    transition: 0.5s;
+    cursor: pointer;
+    &:hover{
+        border: 1px solid transparent;
+        background-color: var(--sh-bg);
+        color: $neutral-10;
+    }
+}
+.products ul .all{
+    @include size(75px , 100%);
+}
+.cards{
+    @include flex(center,center);
+    flex-wrap: wrap;
+    padding: 20px 0;
+    gap: 10px;
+}
+.card{
+    @include size(200px , 250px);
+    border: 1px solid $teal-5;
+}
+.card h5{
+    @include size(100% , 30px);
+    color: var(--text-body);
+    text-align: start;
+    font-size: 18px;
+    margin-top: 10px;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+.card  .img{
+    @include size(100% , 125px);
+}
+.body-card{
+    padding: 10px;
+}

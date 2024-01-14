@@ -1,0 +1,66 @@
+@use '../SASS/Main' as * ;
+
+.about{
+    padding: 30px;
+    @include size(100% , 100% );
+    min-height: calc(100vh - 200px) ;
+    @include flex-col(start,center);
+}
+.about ul{
+    @include size(100% , 40px);
+    @include flex(center,start);
+    gap: 10px;
+    color: var(--text-body);
+    @include screen(md){        
+    flex-wrap: wrap;
+    }
+}
+.about ul li {
+    @include size(120px , 100%);
+    @include flex(center,center);
+    border: 1px solid var(--sh-bg);
+    text-transform: capitalize;
+    border-radius: 8px;
+    transition: 0.5s;
+    cursor: pointer;
+    &:hover{
+        border: 1px solid transparent;
+        background-color: var(--hover-btn);
+        opacity: 50%;
+        color: $neutral-10;
+    }
+}
+.about ul .allposts{
+    @include size(75px , 40px);
+}
+.cards{
+    @include flex(center,center);
+    flex-wrap: wrap;
+    padding: 20px 0;
+    gap: 10px;
+}
+.card{
+    @include size(200px , 250px);
+    border: 1px solid $teal-5;
+}
+.card h5{
+    @include size(100% , 30px);
+    color: var(--text-body);
+    text-align: start;
+    font-size: 16px;
+    margin-top: 10px;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+.card  .img{
+    @include size(100% , 125px);
+}
+.body-card{
+    padding: 10px;
+}
+
+.active{
+    border: 1px solid transparent;
+    background-color: var(--sh-bg);
+    color: $neutral-10;
+}

@@ -1,0 +1,86 @@
+@use '../../SASS/Main' as* ;
+
+.all{    
+    @include size(100% , 100%);
+    padding: 30px 0;
+    @include screen(xms){
+        padding: 10px 0;
+    }
+}
+.all .title{
+    text-align: center;
+    @include screen(xsm){
+        font-size: 14px;
+    }
+}
+.details{
+    @include flex(start,center);
+    @include size(100% , 100%);
+    padding: 20px;
+    gap: 10px;
+    @include screen(xsm){
+        flex-wrap: wrap;
+    }
+}
+.details .img{
+    @include size(50%, 100%);
+    @include flex(center,center);
+    border-radius: 25px;
+    @include screen(xsm){
+        @include size(95% , 100%);
+    }
+}
+.details .img .img-phone{
+    border-radius: 8px;
+    box-shadow: 0px 0px 20px var(--sh-bg) ,0px 0px 10px var(--sh-bg);
+    @include screen(xsm){
+        box-shadow: 0px 0px 2px var(--sh-bg) ,0px 0px 2px var(--sh-bg);
+        @include size(95% , 100%);
+    }
+}
+.details .brand{
+    @include size(50% , 100%);
+    text-transform: capitalize;
+    @include screen(xsm){
+        @include size(95% , 100%);
+        text-align: center;
+        font-size: 14px;
+    }
+}
+.subDetails{
+    @include size(70% , 100%);
+    @include flex-col(center,start);
+    gap: 10px;
+    margin: 10px auto;
+    @include screen(xsm){
+        @include size(95% , 100%);
+    }
+}
+.subDetails h3{
+    text-align: start;
+    font-size: 24px;
+    color: red;
+    span{
+        color: var(--text-body);
+    }
+
+}
+.gallary{
+    @include flex(center,center);
+    flex-wrap: wrap;
+    @include size(100% , 100%);
+    // background-color: $cyan-2;
+    padding: 10px;
+    gap: 15px;
+}
+.gallary-img{
+    border-radius: 5px;
+    border: 2px solid $teal-5;
+}
+
+
+
+
+.loader{
+    @include akrobat($red-5,white);
+}

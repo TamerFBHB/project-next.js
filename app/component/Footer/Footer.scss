@@ -1,0 +1,16 @@
+@use  "../../SASS/Main" as * ;
+
+.footer{
+    @include size(100% , 80px);
+    @include border-top-gradient(1px,transparent,var(--line),transparent);
+    @include flex(space-between , center);
+    @include screen(xsm){
+        @include flex(center, center);
+        flex-wrap: wrap;
+        padding: 15px 0;
+    }
+}
+.footer .social{
+    @include flex(center , center);
+    gap: 10px;
+}
