@@ -2,13 +2,14 @@
 
 
 .home{
-    @include size(100% , 100vh) ;
+    @include size(100% , calc(100vh - 160px)) ;
     @include flex(center,center);
     overflow: hidden;
     @include screen(lg){
         @include flex-col(center,center);
     }
 }
+
 .home .ad{
     @include size(50% , 100%);
     @include flex-col(center,start);
