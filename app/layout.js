@@ -4,7 +4,11 @@ import Footer from './component/Footer/Footer'
 import NavBar from './component/NavBar/NavBar'
 import ThemeProvider from './component/darkMode/ThemeContext'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter ({ 
+  subsets: ['latin'] ,
+   weight: ['400', '700'],
+})
+
 
 export const metadata = {
   title: 'Create Next App',

@@ -11,7 +11,7 @@ export default function Home() {
       </div>
 
       <div className={style.photo}>
-        <Image src={"/images/foto.svg"} width={450} height={350} alt="photo" />
+        <Image src={"/images/foto.svg"} fill alt="photo" className='img'/>
       </div>
     </div>
 
