@@ -5,18 +5,24 @@
     @include size(100% , 100% );
     min-height: calc(100vh - 200px) ;
     @include flex-col(start,center);
+
+    @include screen(md){
+    padding: 10px 0;
+    }
 }
 .about ul{
     @include size(100% , 40px);
     @include flex(center,start);
     gap: 10px;
     color: var(--text-body);
+    
     @include screen(md){        
     flex-wrap: wrap;
+    @include size(100% , 150px);
     }
 }
 .about ul li {
-    @include size(120px , 100%);
+    @include size(120px , 40px);
     @include flex(center,center);
     border: 1px solid var(--sh-bg);
     text-transform: capitalize;
